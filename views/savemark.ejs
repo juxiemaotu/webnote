@@ -1,0 +1,15 @@
+<%- include header %>
+<form action="/savemark"  method="post">
+   <h3> 存储号：<%- storagesequence %> </h3>
+   <h3>	文件名：<%- filetitle %> </h3>
+   <h3> 文件路径：<%- filepath %> </h3>
+   请确认文件信息：<br />
+  存储号：<br />
+  <input type="text" name="storagesequence" size="105px" value=<%-storagesequence %> /><br />
+文件标题：<br />
+  <input type="text" name="filetitle" size="105px" value=<%-filetitle %> /><br />
+  文件路径：<br />
+  <input type="text" name="filepath" size="105px" value=<%- filepath %> /><br />
+  <input type="submit" value="确认上传" />
+</form>
+<%- include footer %>

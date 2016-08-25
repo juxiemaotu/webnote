@@ -1,0 +1,21 @@
+
+/*目录*/
+.toc ul{
+  list-style:none;
+  font-size:120%;
+}
+.toc ul .toc-level-2{
+  padding-left:30px;
+}
+.toc ul .toc-level-3{
+  padding-left:60px;
+}
+.toc ul .toc-level-4{
+  padding-left:90px;
+}
+.toc ul .toc-level-5{
+  padding-left:120px;
+}
+.toc ul .toc-level-6{
+  padding-left:150px;
+}

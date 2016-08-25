@@ -1,0 +1,799 @@
+@font-face {
+  font-family: 'leanote';
+  src: url('../../fonts/leanote-font3/leanote.eot?-vcf23i');
+  src: url('../../fonts/leanote-font3/leanote.eot?#iefix-vcf23i') format('embedded-opentype'), url('../../fonts/leanote-font3/leanote.ttf?-vcf23i') format('truetype'), url('../../fonts/leanote-font3/leanote.woff?-vcf23i') format('woff'), url('../../fonts/leanote-font3/leanote.svg?-vcf23i#leanote') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#logo,
+.mce-i-mind,
+.mce-i-ace-pre,
+.lea-icon {
+  font-family: 'leanote' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-markdown:before {
+  content: "\e604";
+}
+.mce-i-mind:before {
+  content: "\e602";
+}
+.mce-i-ace-pre:before {
+  content: "\e603";
+}
+#logo:before {
+  content: "\e901";
+  line-height: 1;
+  margin-top: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+#logo.icon-only:before {
+  content: "\e902";
+}
+.lang-zh-cn #logo:before {
+  content: "\e900";
+}
+#logo {
+  font-size: 24px;
+  color: #fff;
+}
+.logo-footer {
+  display: block;
+  margin-top: 7px;
+}
+.wx {
+  margin: 3px 0;
+}
+body {
+  /* font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    */
+  font-family: "Libre Baskerville", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "wenquanyi micro hei", sans-serif, "Apple Color Emoji";
+  font-weight: 300;
+  font-size: 16px;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4 {
+  /*font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    */
+  font-family: "Libre Baskerville", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "wenquanyi micro hei", sans-serif, "Apple Color Emoji";
+  font-weight: bold;
+}
+pre,
+pre * {
+  font-size: 14px;
+}
+body div:last-child,
+body p:last-child,
+body blockquote:last-child,
+body pre:last-child,
+body ul:last-child,
+body ol:last-child,
+body table:last-child,
+body figure:last-child,
+body section:last-child,
+body article:last-child,
+body header:last-child,
+body footer:last-child {
+  margin-bottom: 0;
+}
+a {
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none !important;
+}
+#posts img {
+  max-width: 100%;
+}
+.desc p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.desc p {
+  line-height: 26px;
+  margin-bottom: 1.5em;
+}
+.desc pre {
+  font-size: 14px;
+  /*line-height: 24px;*/
+}
+#content h1,
+.desc h1 {
+  font-size: 30px;
+}
+#content h2,
+.desc h2 {
+  font-size: 24px;
+}
+#content h3,
+.desc h3 {
+  font-size: 18px;
+}
+#content h4,
+.desc h4 {
+  font-size: 16px;
+}
+.input-group-addon {
+  background: none;
+}
+#searchInput {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+}
+.input-group-addon {
+  border: none;
+}
+code {
+  padding: 0 .25em;
+  margin: 0 .25em;
+  background: rgba(232, 232, 232, 0.3);
+  font-family: consolas,monaco,monospace,serif;
+  font-size: 16px;
+  color: #2f2f2f;
+  border-radius: .25em;
+}
+a,
+.btn {
+  transition: all 0.2s ease;
+}
+.btn:focus {
+  outline: none;
+}
+#postsContainer {
+  width: 850px;
+  margin: 45px auto 0;
+  z-index: 4;
+}
+#postsContainer .container {
+  width: 100%;
+}
+#postsContainer .container {
+  margin-left: 12px;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+}
+.navbar .container {
+  margin-left: 0;
+}
+.navbar-default {
+  background: none;
+  border-color: #e7e7e7;
+}
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-form {
+  padding: 0;
+}
+.navbar-nav {
+  float: none;
+}
+.navbar-nav > li {
+  float: none;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  font-weight: bold;
+  background: none;
+}
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+.nav > li > a {
+  padding: 5px 10px;
+}
+/* posts */
+#posts {
+  padding-bottom: 20px;
+}
+#posts .each-post {
+  padding: 10px;
+  margin-left: 20px;
+}
+#posts .each-post .title {
+  font-weight: bold;
+  padding: 10px 0;
+  padding-top: 0;
+  margin: 10px 0 10px;
+  font-size: 30px;
+  border-bottom: 1px solid #eee;
+}
+#posts .each-post .title a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  padding: 5px 0;
+}
+#posts .each-post .created-time {
+  /*border-bottom: 1px solid #eee;*/
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #666;
+}
+.more {
+  font-size: 14px;
+  display: inline-block;
+  /* margin-top: 15px; */
+  /* margin-bottom: 15px; */
+  line-height: 1.5;
+  color: #000;
+}
+.more:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.more:after {
+  content: " â†©";
+  font-size: 12px;
+}
+#disqus_thread {
+  border-top: 1px solid #eee;
+  padding: 5px 0 0 0;
+}
+.desc *,
+#content * {
+  word-wrap: break-word;
+}
+/* è¡¨æ ¼ */
+table {
+  margin-bottom: 16px;
+}
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+table th {
+  font-weight: bold;
+}
+table tr {
+  background-color: none;
+  border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+  background-color: #f7f7f9;
+}
+.mce-item-table,
+.mce-item-table td,
+.mce-item-table th,
+.mce-item-table caption {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 6px 13px;
+}
+#headerContainer {
+  margin: auto;
+  box-shadow: 0 0 5px #0A0A0A;
+  padding: 5px 0;
+  background-color: #1263b5;
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#headerContainer #header {
+  margin-left: 10px;
+}
+#headerContainer .logo {
+  display: inline-block;
+  position: relative;
+}
+#headerContainer .logo-text {
+  font-size: 16px;
+  display: inline-block;
+  color: #fff;
+  position: absolute;
+  top: 4px;
+  left: 33px;
+  width: 180px;
+}
+#headerContainer img {
+  width: 30px;
+  height: 30px;
+}
+.app-nav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  list-style: none;
+}
+.app-nav li {
+  float: left;
+}
+.app-nav li a {
+  color: #000;
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px 5px;
+  margin-right: 5px;
+}
+.app-nav li a:first-child {
+  margin-right: 20px;
+}
+.app-nav li a:hover,
+.app-nav li a.active {
+  border-bottom: 4px solid #2a6496;
+  text-decoration: none;
+}
+.share-form {
+  width: 500px;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 30px auto 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+#submit-btn {
+  width: 100px;
+}
+#footer {
+  border-top: 1px solid #ccc;
+  box-shadow: 2px 2px 3px #e4e4e4;
+  font-size: 12px;
+  text-align: center;
+  color: #aaa;
+}
+#footer p {
+  padding: 10px 0;
+}
+#footer .mp {
+  display: none;
+  margin-bottom: 60px;
+}
+#footer .mp img {
+  max-width: 50%;
+}
+#presentation {
+  background-color: #fff;
+  overflow: hidden;
+  display: block;
+}
+#presentation svg {
+  border-radius: 5px;
+}
+#presentation a {
+  color: #2a6496;
+}
+#presentation hr {
+  margin: 20px;
+  width: 20px;
+  border: none;
+}
+#presentation .writting,
+#presentation .black {
+  background-color: #F9F9F5;
+  color: #2C3E50;
+}
+#presentation .writting pre.prettyprint,
+#presentation .black pre.prettyprint {
+  /* Pretty printing styles. Used with prettify.js. */
+  /* SPAN elements with the classes below are added by prettyprint. */
+  /* plain text */
+  /* Specify class=linenums on a pre to get line numbering */
+  /* IE indents via margin-left */
+  display: block;
+  background-color: rgba(102, 128, 153, 0.05);
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1) inset, 45px 0 0 rgba(102, 128, 153, 0.05) inset, 0 1px 0 rgba(102, 128, 153, 0.05);
+  padding: 9.5px;
+}
+#presentation .writting pre.prettyprint .pln,
+#presentation .black pre.prettyprint .pln {
+  color: #000000;
+}
+@media screen {
+  #presentation .writting pre.prettyprint,
+  #presentation .black pre.prettyprint {
+    /* string content */
+    /* a keyword */
+    /* a comment */
+    /* a type name */
+    /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    /* a markup tag name */
+    /* a markup attribute name */
+    /* a markup attribute value */
+    /* a declaration; a variable name */
+    /* a function name */
+  }
+  #presentation .writting pre.prettyprint .str,
+  #presentation .black pre.prettyprint .str {
+    color: #008800;
+  }
+  #presentation .writting pre.prettyprint .kwd,
+  #presentation .black pre.prettyprint .kwd {
+    color: #000088;
+  }
+  #presentation .writting pre.prettyprint .com,
+  #presentation .black pre.prettyprint .com {
+    color: #880000;
+  }
+  #presentation .writting pre.prettyprint .typ,
+  #presentation .black pre.prettyprint .typ {
+    color: #660066;
+  }
+  #presentation .writting pre.prettyprint .lit,
+  #presentation .black pre.prettyprint .lit {
+    color: #006666;
+  }
+  #presentation .writting pre.prettyprint .pun,
+  #presentation .black pre.prettyprint .pun,
+  #presentation .writting pre.prettyprint .opn,
+  #presentation .black pre.prettyprint .opn,
+  #presentation .writting pre.prettyprint .clo,
+  #presentation .black pre.prettyprint .clo {
+    color: #666600;
+  }
+  #presentation .writting pre.prettyprint .tag,
+  #presentation .black pre.prettyprint .tag {
+    color: #000088;
+  }
+  #presentation .writting pre.prettyprint .atn,
+  #presentation .black pre.prettyprint .atn {
+    color: #660066;
+  }
+  #presentation .writting pre.prettyprint .atv,
+  #presentation .black pre.prettyprint .atv {
+    color: #008800;
+  }
+  #presentation .writting pre.prettyprint .dec,
+  #presentation .black pre.prettyprint .dec,
+  #presentation .writting pre.prettyprint .var,
+  #presentation .black pre.prettyprint .var {
+    color: #660066;
+  }
+  #presentation .writting pre.prettyprint .fun,
+  #presentation .black pre.prettyprint .fun {
+    color: #ff0000;
+  }
+}
+#presentation .writting pre.prettyprint ol.linenums,
+#presentation .black pre.prettyprint ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(102, 128, 153, 0.4);
+}
+#presentation .writting pre.prettyprint ol.linenums,
+#presentation .black pre.prettyprint ol.linenums {
+  margin-left: 10px;
+}
+#presentation .black {
+  background-color: #000;
+  color: #fff;
+}
+#presentation .black #posts .each-post .title {
+  border-color: #666;
+}
+#presentation .black #headerContainer {
+  box-shadow: 0 0 5px #666;
+}
+#presentation .black blockquote {
+  background-color: rgba(192, 182, 182, 0.5);
+  border-left-color: #988F8F;
+}
+#presentation .black code {
+  color: #DAD6D7;
+  background-color: #908185;
+}
+#presentation .black pre.prettyprint {
+  background-color: #CACAB7;
+}
+#presentation .black ol.linenums > li {
+  color: #000;
+}
+#presentation .black svg {
+  background: #F9F9F5;
+}
+#presentation .black .pren-tool a {
+  color: #fff;
+}
+#presentation .text-min-1 .pren-content * {
+  font-size: 16px;
+}
+#presentation .text-min-1 .pren-content svg *,
+#presentation .text-min-1 .pren-content pre * {
+  font-size: 16px;
+}
+#presentation .text-min-1 .pren-content h1 {
+  font-size: 28px;
+}
+#presentation .text-min-1 .pren-content h2 {
+  font-size: 22px;
+}
+#presentation .text-min-1 .pren-content h3 {
+  font-size: 18px;
+}
+#presentation .text-min-1 .pren-content h4 {
+  font-size: 14px;
+}
+#presentation .text-min-2 .pren-content * {
+  font-size: 14px;
+}
+#presentation .text-min-2 .pren-content svg *,
+#presentation .text-min-2 .pren-content pre * {
+  font-size: 16px;
+}
+#presentation .text-min-2 .pren-content h1 {
+  font-size: 24px;
+}
+#presentation .text-min-2 .pren-content h2 {
+  font-size: 20px;
+}
+#presentation .text-min-2 .pren-content h3 {
+  font-size: 16px;
+}
+#presentation .text-min-2 .pren-content h4 {
+  font-size: 14px;
+}
+#presentation .text-max-1 .pren-content * {
+  font-size: 20px;
+}
+#presentation .text-max-1 .pren-content svg *,
+#presentation .text-max-1 .pren-content pre * {
+  font-size: 16px;
+}
+#presentation .text-max-1 .pren-content h1 {
+  font-size: 32px;
+}
+#presentation .text-max-1 .pren-content h2 {
+  font-size: 28px;
+}
+#presentation .text-max-1 .pren-content h3 {
+  font-size: 24px;
+}
+#presentation .text-max-1 .pren-content h4 {
+  font-size: 18px;
+}
+#presentation .text-min-2 .pren-title {
+  font-size: 24px;
+}
+#presentation .text-min-1 .pren-title {
+  font-size: 26px;
+}
+#presentation .text-max-1 .pren-title {
+  font-size: 36px;
+}
+#presentation .text-max-2 .pren-title {
+  font-size: 40px;
+}
+#presentation .text-max-2 .pren-content * {
+  font-size: 24px;
+}
+#presentation .text-max-2 .pren-content svg *,
+#presentation .text-max-2 .pren-content pre * {
+  font-size: 16px;
+}
+#presentation .text-max-2 .pren-content h1 {
+  font-size: 38px;
+}
+#presentation .text-max-2 .pren-content h2 {
+  font-size: 32px;
+}
+#presentation .text-max-2 .pren-content h3 {
+  font-size: 28px;
+}
+#presentation .text-max-2 .pren-content h4 {
+  font-size: 24px;
+}
+#scrollContainer {
+  margin-top: 45px;
+  overflow-y: scroll;
+}
+.pren-tool {
+  position: fixed;
+  -webkit-user-select: none;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 45px;
+  z-index: 1001;
+  text-align: center;
+}
+.pren-tool:hover {
+  opacity: 1;
+}
+.pren-tool a {
+  display: block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+}
+.pren-tool .pren-tool-bg-color {
+  margin-top: 50px;
+}
+.pren-tool .pren-tool-text-size-max {
+  font-size: 16px;
+}
+.pren-tool .pren-tool-text-size-min {
+  font-size: 12px;
+}
+.pren-content {
+  word-wrap: break-word;
+}
+.pren-content * {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 100%;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Droid Sans Mono", "Droid Sans Fallback", sans-serif;
+}
+.pren-content svg *,
+.pren-content pre * {
+  font-size: 16px;
+}
+.pren-content p {
+  margin: 10px 0;
+}
+.pren-content h1 {
+  font-size: 30px;
+}
+.pren-content h2 {
+  font-size: 24px;
+}
+.pren-content h3 {
+  font-size: 18px;
+}
+.pren-content h4 {
+  font-size: 14px;
+}
+.avatar a {
+  display: inline-block;
+}
+#userLogo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+}
+.post-info {
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+.download-cover {
+  display: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  .share-form {
+    width: 100%;
+    margin-top: 5px;
+  }
+  #presentation {
+    overflow-y: auto;
+  }
+  #scrollContainer {
+    overflow-y: auto;
+  }
+  .pren-tool {
+    display: none;
+  }
+  #posts .each-post {
+    padding: 15px;
+    margin: 0;
+  }
+  #posts .each-post .title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .created-time .post-info {
+    display: none;
+  }
+  .right-section {
+    display: none;
+  }
+  #content {
+    margin-top: 10px;
+  }
+  #postsContainer {
+    width: 100%;
+    margin: auto;
+  }
+  .download-cover {
+    display: block;
+    width: 100%;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: -1px;
+    z-index: 2;
+  }
+  .download-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 151px;
+    height: 48px;
+    font-size: 13px;
+    color: white;
+  }
+  .download-logo div {
+    line-height: 25px;
+    font-size: 25px;
+  }
+  .download-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 88px;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #1263b5;
+    text-align: center;
+    color: white;
+    height: 28px;
+  }
+  .download-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 34px;
+  }
+  .download-close i {
+    font-style: normal;
+    color: #eee;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+  }
+  #footer .mp {
+    display: block;
+  }
+  audio {
+    width: 100%;
+  }
+}
+#scrollContainer::-webkit-scrollbar-button {
+  display: none;
+}
+#scrollContainer::-webkit-scrollbar-track {
+  background: #fff;
+}
+#scrollContainer::-webkit-scrollbar-track-piece {
+  background: #fff;
+}
+#scrollContainer::-webkit-scrollbar {
+  height: 8px;
+  width: 6px;
+  background: rgba(118, 176, 243, 0.3);
+  border-radius: 5px;
+}
+#scrollContainer::-webkit-scrollbar-thumb {
+  width: 8px;
+  min-height: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+

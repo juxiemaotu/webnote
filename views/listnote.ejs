@@ -1,0 +1,19 @@
+<%- include header %>
+<% for(var i in data){%>
+<li>
+<h2>
+<tr>
+<td>
+<%=data[i].filetitle%>
+</td>
+<% var url = "http://localhost:6001/md/" + data[i].storagesequence + ".md" %>
+<td>
+<a href=  <%- url %>   > 阅读 </a> 
+</td>
+</h2>
+</li>
+<% } %>
+
+
+<%- include footer %>
+

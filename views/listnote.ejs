@@ -6,8 +6,8 @@
 <td>
 <%=data[i].filetitle%>
 </td>
-<% var readurl = "http://localhost:6001/md/" + data[i].storagesequence + ".md" %>
-<% var modifyurl = "http://localhost:6001/modifymd/" + data[i].storagesequence + ".md" %>
+<% var readurl = "http://ec2-52-78-165-72.ap-northeast-2.compute.amazonaws.com/md/" + data[i].storagesequence + ".md" %>
+<% var modifyurl = "http://ec2-52-78-165-72.ap-northeast-2.compute.amazonaws.com/modifymd/" + data[i].storagesequence + ".md" %>
 <td>
 <a href=  <%- readurl %>   > 阅读 </a> 
 <a href=  <%- modifyurl %>   > 修改 </a>

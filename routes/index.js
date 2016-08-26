@@ -56,34 +56,33 @@ module.exports = function(app) {
 
 
         //save in db
-	    var mdfile = new dbbase.Mdfile({
-		    storagesequence : storagesequence,
-		    filetitle : filetitle,
-		    filetype : "md",
-		    category : "daiguidang",
-		    localpath_prefix :localpath_prefix,
-		    localpath_relative : localpath_relative,
-		    webpath_prefix : webpath_prefix,
-		    webpath_relative : webpath_relative,
-		    author : "admin",
-		    filesize : "",
-	    });
+	var mdfile = new dbbase.Mdfile({
+		storagesequence : storagesequence,
+		filetitle : filetitle,
+		filetype : "md",
+		category : "daiguidang",
+		localpath_prefix :localpath_prefix,
+		localpath_relative : localpath_relative,
+		webpath_prefix : webpath_prefix,
+		webpath_relative : webpath_relative,
+		author : "admin",
+		filesize : "",
+	});
 
-	    mdfile.save(function(err) {
-		    if (err) {
-		        console.log('保存失败')
-		        return;
-		    }
-	    console.log('meow');
-	    });
+	mdfile.save(function(err) {
+		if (err) {
+		    console.log('保存失败')
+		    return;
+		}
+		console.log('meow');
+	});
 
 
         //解析 markdown 为 html
-
         fs.readFile(localpath,"utf8",function(err,data){
                 if(err)throw err;
                 var markdoc = marked(data,renderer);
-                res.render("markdownshow",{ title:'阅读笔记',filetitle:filetitle,markdoc:markdoc});
+	        res.render("markdownshow",{ title:'阅读笔记',filetitle:filetitle,markdoc:markdoc});
         });
 
 
@@ -92,8 +91,16 @@ module.exports = function(app) {
 
    app.get('/md/:urlkey',function(req,res){
 	var localpath = './savefiles/' + req.params.urlkey;
-		
-		console.log(localpath);
+	var sequencestring = req.params.urlkey.replace(".md","");
+	var filetitle = "";
+        dbbase.Mdfile.find({"storagesequence":sequencestring},function(err, docs) {
+		if (err) {
+                console.error(err);
+                return;
+                }
+		return filetitle = docs[0].filetitle;
+
+	});	
 
 	fs.readFile(localpath,"utf8",function(err,data){
 		if (err) {
@@ -103,10 +110,9 @@ module.exports = function(app) {
 
 //	if(err)throw err;
 	var markdoc = marked(data,renderer);
-	res.render("markdownshow",{title:req.params.filename,markdoc:markdoc});
-});
-
-});
+	res.render("markdownshow",{title:req.params.filename,filetitle:filetitle,markdoc:markdoc});
+	});
+  });
 
  
   app.get('/modifymd/:urlkey',function(req,res){

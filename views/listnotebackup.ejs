@@ -1,0 +1,19 @@
+<%- include header %>
+<% for(var i in data){%>
+<li>
+<h2>
+<tr>
+<td>
+<%=data[i].filetitle%>
+</td>
+<% var url = "http://ec2-52-78-165-72.ap-northeast-2.compute.amazonaws.com/md/" + data[i].storagesequence + ".md" %>
+<td>
+<a href=  <%- url %>   > 阅读 </a> 
+</td>
+</h2>
+</li>
+<% } %>
+
+
+<%- include footer %>
+

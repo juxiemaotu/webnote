@@ -1,0 +1,13 @@
+<%- include header %>
+<form action="/modifynote"  method="post">
+  标题：<br />
+  <input type="text" name="filetitle" size="105px" value=<%- filetitle %> /><br />
+  正文：<br />
+  <textarea name="filecontent" rows="30" cols="75" %> ><%- filecontent %></textarea><br />
+  原存储号：<input type="text" name="storagesequenceold" size="85px" value=<%- storagesequenceold %> /><br />
+  原标题：<input type="text" name="filetitleold" size="85px" value=<%- filetitleold %> /><br />
+  原本地路径：<input type="text" name="localpathold" size="85px" value=<%- localpathold %> /><br />
+  原网络名称：<input type="text" name="webpathold" size="85px" value=<%- webpathold %> /><br />
+  <input type="submit" value="提交修改" />
+</form>
+<%- include footer %>

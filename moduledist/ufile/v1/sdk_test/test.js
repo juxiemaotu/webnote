@@ -1,11 +1,8 @@
 
-var t = new Date();
-console.log(t);
-
-var sub = "sub";
-var subtext = "subtext"
-
-console.log(subtext.indexOf(sub) === 0);
-
-
-console.log("FXFF".toLowerCase());
+var string = "123456790";
+string = string.toString();
+console.log(string);
+name = string + ".md";
+console.log(name);
+newstring = name.replace(".md","");
+console.log(newstring);

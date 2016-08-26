@@ -3,9 +3,9 @@ var AuthClient = require('ufile').AuthClient;
 var util = require('util');
 
 
-var bucket = "yellow-cup";
-var key = "6M-file";
-var file_path = '6M-file.dl';
+var bucket = "tupianku";
+var key = "md/xuexi/1472135612858.md";
+var file_path = '/srv/warehouse/test/webnote/savefiles/111.md';
 
 var method = 'GET';
 var url_path_params = '/' + key;
